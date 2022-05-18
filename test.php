@@ -187,13 +187,43 @@ var_dump(nbrcheck(14,50))."\n" ;
 var_dump(nbrcheck(11,45))."\n" ;
 var_dump(nbrcheck(25,40))."\n" ;
 
+//Write a PHP program to check if a string 'yt' appears at index 1 in a given string. If it appears return a string without 'yt' otherwise return the original string
+
+function ytcheck($str){
+    $s = substr($str,0,2);
+    if ($s == "yt"){
+        return substr($str,2,strlen($str)-2);
+    }
+    return $str ;
+}
+echo ytcheck("python")."\n" ;
+echo ytcheck("ytade")."\n" ;
+echo ytcheck("jsues")."\n" ;
+echo ytcheck("yt")."\n" ;
+echo ytcheck("bytag")."\n" ;
+
+//Write a PHP program to check the largest number among three given integers
+
+echo max(1 ,2 ,3)."\n" ;
+echo max(1 ,1 ,1)."\n" ;
+echo max(1 ,3 ,2)."\n" ;
+echo max(1 ,2 ,2)."\n" ;
+
+//Write a PHP program to check which number nearest to the value 100 among two given integers. Return 0 if the two numbers are equal
+
+function nearest($int1 , $int2){
+    if ( (100-$int1)<(100-$int2)){
+        return $int1;
+    }return $int2;
 
 
 
 
-
-
-
+}
+echo nearest(78 , 95)."\n" ;
+echo nearest(25 , 35)."\n" ;
+echo nearest(40 , 50)."\n" ;
+echo nearest(90 , 90)."\n" ;
 
 
 
